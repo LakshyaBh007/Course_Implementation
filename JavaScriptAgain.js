@@ -112,7 +112,6 @@ console.log(names);
 console.log(fav);
 
 //Generators
-//Symbols
 //Iterator
 
 //Global Variables(declared outside function or in window object)
@@ -277,4 +276,67 @@ const ff = null;
 const gg = undefined;
 const hhh = {b:'g'};
 const ij = function(){return10};
-console.log(typeof );
+console.log(typeof ij);
+
+//unary operator - variable to number
+var pp = "100";
+var oo = +pp;
+var mm = "gggg";
+var xxx= +mm;
+console.log(typeof oo, typeof pp, typeof xxx, xxx, oo);
+
+//delete operator
+var del = {name:"sm", age:30};
+delete del.age;
+console.log(del);
+
+//ternary operator and chaining
+const love = false;
+const life = true;
+console.log(love?'dream': life?'harsh':'reality');
+
+//numbers
+console.log(Math.random());
+console.log(Math.floor(Math.random()*100)+1);
+function Random(r){
+    return Math.floor(Math.random()*r);
+}
+console.log(Random(1000)); 
+console.log(isNaN('Hello'));
+console.log(isFinite(1*0));
+
+//string
+
+//slice - returns new array
+let xyz = ["java","greek", 12335, "php"];
+console.log(xyz.slice(1,4));
+console.log(xyz.splice(2,2,50,'fgh'));
+console.log(xyz);
+
+//substring check index of, test, includes
+let str = "javapythonnode";
+let exp1 = 'python';
+console.log(str.indexOf('python'));
+console.log(str.includes('java',5));
+
+//trim
+const fname = "\t   jivan    manny  \n  ";
+console.log(fname.trim());
+console.log(fname.trimEnd());
+console.log(fname.trimStart());
+
+//eval
+console.log(eval('45+89'))
+
+//startswith
+console.log(str.startsWith('java'));
+console.log(str.startsWith('node'));
+
+
+
+
+
+
+
+
+
