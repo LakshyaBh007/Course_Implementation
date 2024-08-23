@@ -209,6 +209,8 @@ return `mean: ${mean} and median: ${med}`;
 };
 console.log(MeanMedian(MandM));
 
+
+
 //JSON Array
 let employee = [
     { name: "Kabir Dixit", email: "kabir.dixit@gmail.com", age: 23 },
@@ -233,3 +235,26 @@ const user = {'name': 'Shashi Meda',
     'email': 'shashi.meda@email.com', 
     'age': 28}
 console.log(JSON.stringify(user));
+
+//Rest Parameter
+function sum(...args){ //rest parameter  should be last
+  return args.reduce((previous, current) => {
+    return previous + current;
+  });
+}
+console.log(sum(10, 20, 30));
+
+function display(a, /*...args,*/ b) { //error
+  console.log(a);
+  for (let i = 0; i < args.length; i++) {
+    console.log(args[i]);
+  }
+  console.log(b);
+}
+
+display(10, 20, 30, 40, 50);
+
+//newArray() method
+const myArray = new Array(); //empty
+const myOtherArray = new Array(3); //length 3
+const myThridArray = new Array('a','b','c'); //elements

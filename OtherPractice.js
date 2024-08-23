@@ -270,11 +270,12 @@ console.log(ArrayByFeatures(Arrayob))
 //ArrayPractice
 
 const input = [1, 2, 3, 4, 5];
-const squaremap = input.map((x)=> Math.pow(x,2))
+const squaremap = input.map((x)=>x*x)
 const squarefor = []
-const squareeach = input.forEach((x)=>{squarefor.push(x*x)})
+input.forEach((x)=>{squarefor.push(x*x)})
 console.log(squaremap)
 console.log(squarefor)
+
 
 const input1 = [1, -4, 12, 0, -3, 29, -150];
 const positivevalue = input1.filter((x) => x >= 0)
@@ -282,28 +283,65 @@ const sumarray = positivevalue.reduce((x,y)=>x+y,0)
 console.log(positivevalue)
 console.log(sumarray)
 
-// const input2 = [12, 46, 32, 64];
-// const meanmedian = input2.sort((a,b)=>a-b)
-// const mandm = meanmedian.reduce((a,b)=> a.mean= a.mean+b/input2.length,
-//               if (input2.length%2 === 0){
-
-//               }
-            
- 
-// ) 
-
-const arraym = (a)=>{
-  a.sort((x, y) => (y-x))
-  if (a.length%2===0){
-       const x = (a.length/2 - 1);
-       const y = (a.length/2);
-       const z = (a[x]+a[y])/2;
-       return z;
+const input2 = [12,46,32,64];
+const MandM = (array) => {
+  array.sort((x,y)=>x-y);
+  let total = 0;
+  for (let m of array){
+      total = total + m;
   }
-  else {
-    const x = (a.length-1)/2;
-    return a[x];
+   let mean = total/array.length;
+
+  let median = 0;
+  if (array.length%2 === 0){
+    median = (array[array.length/2] + array[array.length/2 - 1])/2;
+  } else {
+    median = (array.length - 1)/2;
   }
+  return `Mean: ${mean} and Median: ${median}`;
 }
+console.log(MandM(input2));
 
-console.log(arraym([23,343,23,44,34,46]))
+
+const input3 = 'George Raymond Richard Martin';
+const Abbr = (string) => {
+  let array = string.split(' '); //split by space
+  console.log(array)
+  let abbv = array.map(x=>x[0]);
+  let final = abbv.join('');
+  return final;
+}
+console.log(Abbr(input3));
+
+
+const input4 = [
+  {
+    name: "John",
+    age: 13,
+  },
+  {
+    name: "Mark",
+    age: 56,
+  },
+  {
+    name: "Rachel",
+    age: 45,
+  },
+  {
+    name: "Nate",
+    age: 67,
+  },
+  {
+    name: "Jennifer",
+    age: 65,
+  },
+];
+
+let Diff= (age) => {
+  let ageDif = age.map((a)=> a.age);
+  return `Min Age: ${Math.min(...ageDif)} 
+Max Age: ${Math.max(...ageDif)}
+Differencre: ${Math.max(...ageDif) - Math.min(...ageDif)}`;
+} 
+console.log(Diff(input4));
+
