@@ -90,5 +90,48 @@ console.log(`Target: ${target} and Guess: ${guess}`);
 
 //break - to break the loop
 
-//for of
+//for vs for of
 
+const magicSquare = [
+	[2,7,8],
+	[9,5,1],
+	[4,3,8]
+]
+
+for (let i = 0; i<magicSquare.length; i++)
+{
+	let row = magicSquare[i];
+	let sum = 0;
+	for (let j = 0; j<row.length; j++){
+		sum = sum + row[j];
+		}
+	console.log(row,sum);
+}
+
+for (let row of magicSquare){
+	let sum = 0;
+	for(let num of row){
+		sum += num;
+	}
+	console.log(row,sum);
+}
+
+const movieReviews = {
+	Arrival                : 9.5,
+	Alien                  : 9,
+	Amelie                 : 8,
+	'In Bruges'            : 9,
+	Amadeus                : 10,
+	'Kill Bill'            : 8,
+	'Little Miss Sunshine' : 8.5,
+	Coraline               : 7.5
+};
+
+let sum = 0;
+for (let r of Object.values(movieReviews)){
+	sum += r;
+}
+let avg = sum/Object.keys(movieReviews).length;
+console.log(avg);
+
+//for in
