@@ -336,12 +336,11 @@ const input4 = [
     age: 65,
   },
 ];
-
 let Diff= (age) => {
   let ageDif = age.map((a)=> a.age);
   return `Min Age: ${Math.min(...ageDif)} 
 Max Age: ${Math.max(...ageDif)}
 Differencre: ${Math.max(...ageDif) - Math.min(...ageDif)}`;
-} 
+};
 console.log(Diff(input4));
 
