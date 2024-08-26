@@ -135,3 +135,6 @@ let avg = sum/Object.keys(movieReviews).length;
 console.log(avg);
 
 //for in
+for (let i in movieReviews){
+	console.log(i,movieReviews[i]);
+}
