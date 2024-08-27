@@ -61,4 +61,85 @@ function isPangram(string){
 }
 console.log(isPangram('djsunbheiofhnsafklnaiodfnsd'));
 
-//Function Challenge 4: 
+//Function Challenge 4: Get Random Card
+ function getCard(){
+    let val = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+    let st = ['Clubs','Spades', 'Hearts', 'Diamonds'];
+    let idx = Math.floor(Math.random()*val.length);
+    let value = val[idx];
+    let stidx = Math.floor(Math.random()*st.length);
+    let suit = st[stidx];
+    return {Value: value, Suit: suit};
+ }
+console.log(getCard());
+
+function doubleArr(arr){
+    const result = [];
+    for (let num of arr){
+        let double = num*2;
+        result.push(double);
+    }
+    return result;
+ }
+console.log(doubleArr([232,535,344]));
+
+function add(x, y) {
+    return x + y;
+  }
+  
+const subtract = function (x, y) {
+    return x - y;
+  }
+  
+function multiply(x, y) {
+    return x * y;
+  }
+  
+const divide = function (x, y) {
+    return x / y;
+  }
+  
+const operations = [add, subtract, multiply, divide];
+  
+  for (let func of operations) {
+    let result = func(30, 5);
+    console.log(result);
+  }
+  
+const thing = {
+    doSomething: multiply
+  }
+console.log(thing.doSomething(4, 5));
+
+function callthreetimes(fa){
+    fa();
+    fa();
+    fa();
+}
+
+function rage(){
+    console.log('I hate everthing');
+}
+
+callthreetimes(rage);
+
+function repeatNtimes(action,num){
+    for(let i = 0; i < num; i++){
+        action();
+    }
+}
+
+repeatNtimes(rage,5);
+
+function pickOne(f1,f2){
+    let rand = Math.random();
+    if(rand<0.5){
+        f1()
+    }else{
+        f2()
+    }
+}
+
+pickOne(rage,repeatNtimes(rage,2))
+
+

@@ -277,11 +277,16 @@ console.log(squaremap)
 console.log(squarefor)
 
 
+
+
 const input1 = [1, -4, 12, 0, -3, 29, -150];
 const positivevalue = input1.filter((x) => x >= 0)
 const sumarray = positivevalue.reduce((x,y)=>x+y,0)
 console.log(positivevalue)
 console.log(sumarray)
+
+
+
 
 const input2 = [12,46,32,64];
 const MandM = (array) => {
@@ -303,6 +308,8 @@ const MandM = (array) => {
 console.log(MandM(input2));
 
 
+
+
 const input3 = 'George Raymond Richard Martin';
 const Abbr = (string) => {
   let array = string.split(' '); //split by space
@@ -312,6 +319,8 @@ const Abbr = (string) => {
   return final;
 }
 console.log(Abbr(input3));
+
+
 
 
 const input4 = [
@@ -343,4 +352,117 @@ Max Age: ${Math.max(...ageDif)}
 Differencre: ${Math.max(...ageDif) - Math.min(...ageDif)}`;
 };
 console.log(Diff(input4));
+
+
+
+
+const input5 = "Every developer likes to mix kubernetes and javascript";
+//output - "E3y d7r l3s to mix k8s and j8t"
+
+const Numero = (str) => {
+  let strArray = str.split(' ');
+  console.log(strArray)
+  let strNumero = (word)=>{
+    console.log(word)
+    return word[0]+(word.length-2) + word[word.length-1]};
+  let strLong = strArray.map((word)=>word.length>3?strNumero(word):word)
+  console.log(strLong);
+  let Numeronym = strLong.join(' ');
+  return Numeronym;
+}
+console.log(Numero('I am Lakshya Bhatia from Jaipur'));
+
+
+
+
+const input6 = [
+  ["a", "b", "c"],
+  ["c", "d", "f"],
+  ["d", "f", "g"],
+];
+// output - {
+//     a: 1,
+//     b: 1,
+//     c: 2,
+//     d: 2,
+//     f: 2,
+//     g: 1,
+//   }
+//flat()- helps in flattening of arrays to one level
+
+const count = (array)=>{
+  const flatArray = array.flat();
+  console.log(flatArray);
+  const countArray = flatArray.reduce((acc,cur)=>{
+  return {...acc, [cur]: acc[cur]? ++acc[cur]:1}
+  },{}
+)
+return countArray;
+}
+console.log(count(input6));
+
+
+
+
+const students = [
+  { name: "Alice", scores: [90, 85, 92] },
+  { name: "Bob", scores: [75, 80, 85] },
+  { name: "Charlie", scores: [90, 95, 85] },
+  { name: "Jack", scores: [100, 100, 100] }
+];
+// output - [ 
+//   { name: 'Jack', average: 100 }
+// ]
+
+const studentAverages = students.map(student=>{
+  const sum = student.scores.reduce((acc,score)=>acc+score);
+  return{name: student.name, average: sum/student.scores.length}
+});
+console.log(studentAverages);
+
+const highScore = studentAverages.filter(student=>student.average>90);
+console.log(highScore);
+
+
+
+
+const products = [
+  { name: "Product 1", price: 20, category: "Electronics" },
+  { name: "Product 2", price: 30, category: "Clothes" },
+  { name: "Product 3", price: 40, category: "Electronics" },
+  { name: "Product 4", price: 50, category: "Clothes" },
+  { name: "Product 5", price: 60, category: "Clothes" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+  { name: "Product 7", price: 80, category: "Clothes" },
+  { name: "Product 8", price: 90, category: "Electronics" },
+];
+// Output
+// [ 
+//   { category: 'Clothes', average: 55 },
+//   { category: 'Electronics', average: 55 }
+// ]
+
+
+
+
+const input7 = 6;
+//output- 720 factorial
+
+
+
+
+const employees = [
+  { name: "John", salary: 50000, department: "IT" },
+  { name: "Jane", salary: 60000, department: "HR" },
+  { name: "Bob", salary: 55000, department: "IT" },
+  { name: "Sophie", salary: 75000, department: "HR" },
+  { name: "Mike", salary: 65000, department: "IT" },
+  { name: "Emily", salary: 80000, department: "HR" },
+  { name: "David", salary: 70000, department: "IT" },
+];
+//output- [
+//   { department: 'HR', average: 71666 }
+// ]
+
+
 
