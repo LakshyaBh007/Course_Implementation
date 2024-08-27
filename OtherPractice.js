@@ -235,7 +235,10 @@ let Type = Arrayob.reduce(
 console.log(Type);
 
 let Size = Arrayob.reduce(
-  (a, c) => ({ ...a, [c.size]: a[c.size] ? ++a[c.size] : 1 }),
+  (a, c) => {
+    a[c.size] ? a[c.size]++ : a[c.size] = 1;
+    return a;
+  },
   {}
 );
 console.log(Size);
@@ -442,11 +445,22 @@ const products = [
 //   { category: 'Electronics', average: 55 }
 // ]
 
+const categoryWise = (products)=>{
+  products
+}
 
 
 
 const input7 = 6;
 //output- 720 factorial
+
+const factorialValue = (input)=>{
+const arr = [];
+arr.length = input;
+arr.fill(input); //helps in fillling of array
+return arr.reduce((acc,val,index)=>acc*(val-index))
+}
+console.log(factorialValue(input7));
 
 
 

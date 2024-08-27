@@ -73,6 +73,8 @@ console.log(isPangram('djsunbheiofhnsafklnaiodfnsd'));
  }
 console.log(getCard());
 
+
+
 function doubleArr(arr){
     const result = [];
     for (let num of arr){
@@ -139,7 +141,25 @@ function pickOne(f1,f2){
         f2()
     }
 }
+pickOne(rage,repeatNtimes)
 
-pickOne(rage,repeatNtimes(rage,2))
+function multiplyBy(num){
+ return function(x){
+    return x*num
+ }
+}
 
+function makeBetweenFunc(x,y){
+    return function(num){
+        return num>=x && num<=y;
+    }
+}
 
+const isChild = makeBetweenFunc(0,18);
+const isInNineties = makeBetweenFunc(1998,1999);
+const isNiceWeather = makeBetweenFunc(68,79);
+console.log(isChild(67));
+console.log(isInNineties(1998));
+console.log(isNiceWeather(98));
+
+//Arrow Functions

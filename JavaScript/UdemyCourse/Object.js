@@ -30,5 +30,5 @@ const student = {
         final : 88
     }
 };
-console.log(student.exams.final);
+console.log(student.firstName);
 
