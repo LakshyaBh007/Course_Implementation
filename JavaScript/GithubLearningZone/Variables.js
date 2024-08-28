@@ -88,11 +88,11 @@ var message = "The variable Has been hoisted";
 //between variable creation and its initialization where they 
 //can't be accessed.
 
-var hh = null;
+var hh = null;jjjjj
 var c = 45;
 var a = hh || c;
 console.log(a);
-
+j
 var val = 23;
 function hois(val){
     console.log(val);

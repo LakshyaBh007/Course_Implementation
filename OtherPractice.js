@@ -397,7 +397,8 @@ const count = (array)=>{
   const flatArray = array.flat();
   console.log(flatArray);
   const countArray = flatArray.reduce((acc,cur)=>{
-  return {...acc, [cur]: acc[cur]? ++acc[cur]:1}
+  acc[cur]? acc[cur]++ : acc[cur] = 1;
+  return acc
   },{}
 )
 return countArray;

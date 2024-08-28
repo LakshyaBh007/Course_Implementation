@@ -193,3 +193,32 @@ function parseResponse([protocol, statusCode, contentType]) {
     console.log(`Status: ${statusCode}`)
 }
 parseResponse(response);
+
+//Computed Properties
+const role = 'host';
+const person = 'jools holland';
+const role2 = 'director';
+const person2 = 'james cameron';
+
+// const team = {};
+// team[role] = person;
+// team[role2] = person2;
+
+const team = {
+    [role]: person,
+    [role2]: person,
+    [1+6+9]: 'sixteen'
+}
+console.log(team)
+
+function addprop(obj,k,v){
+    const copy = {
+        ...obj
+    };
+    copy[k]=v;
+    return copy;
+}
+console.log(addprop(team,'gibberish','hehe'));
+
+console.log(team.role='w')
+console.log(team);

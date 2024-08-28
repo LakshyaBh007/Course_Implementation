@@ -32,3 +32,19 @@ const student = {
 };
 console.log(student.firstName);
 
+
+const math = {
+    numbers: [1,2,3,4,5],
+    add: (x,y)=>x+y,
+    multiply: (x,y)=>x*y
+}
+console.log(math);
+console.log(math.add(343,434));
+
+const auth = {
+    username: 'tommyboy',
+    login(){
+        console.log('logged in')
+    }
+}
+console.log(auth.login);
