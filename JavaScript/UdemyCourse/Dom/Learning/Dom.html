@@ -10,6 +10,12 @@
 </head>
 
 <body>
+  <button onmouseover="alert('you clicked me')">CLick Me</button>
+  <button onclick="alert('you clicked me tooooo')">CLick Me toooo</button>
+  <button id="clicker">Clicker</button>
+  <form action="">
+    <input onclick="console.log('clicked')" type="range" min="10" max="50"/>
+  </form>
   <h1 class="header">My Webpage</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint natus nostrum quas laudantium quasi ut
     voluptatem fugiat aliquid architecto. In distinctio expedita doloribus veritatis, vitae voluptates optio commodi
@@ -20,6 +26,11 @@
     similique.
     <script>console.log('hello')</script>
   </p>
+  <ul id="todos">
+  <li class="todo">mow the lawn<button>x</button></button></li>
+  <li class="todo">milk the cows<button>x</button></li>
+  <li class="todo">feed the alpacas<button>x</button></li>
+  </ul>
   <form action="">
     <input type="text" placeholder="Bear Name">
     <input type="password" placeholder="password">
