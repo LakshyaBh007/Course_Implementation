@@ -9,9 +9,10 @@ const colors = [
     'violet'
 ]
 
-const changeColor = function(){
+const changeColor = function(evt){
     const h1 = document.querySelector('h1');
     h1.style.color = this.style.backgroundColor;
+    console.log(evt);
 }
 
 const container = document.querySelector('#boxes');
@@ -23,3 +24,7 @@ for (let color of colors){
     container.appendChild(box);
     box.addEventListener('click', changeColor);
     }
+
+document.body.addEventListener('keypress', function(e){
+    console.log(e);
+});
