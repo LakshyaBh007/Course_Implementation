@@ -210,7 +210,6 @@ return `mean: ${mean} and median: ${med}`;
 console.log(MeanMedian(MandM));
 
 
-
 //JSON Array
 let employee = [
     { name: "Kabir Dixit", email: "kabir.dixit@gmail.com", age: 23 },
