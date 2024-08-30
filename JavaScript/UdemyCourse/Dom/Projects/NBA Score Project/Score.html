@@ -6,17 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NBA Score Table</title>
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="Score.css">
 </head>
 
 <body>
+  <h2>Golden State Warriors</h2>
   <section id = 'gs'>
-    <h2>Golden State Warriors</h2>
   </section>
+  <h2>Houston Rockets</h2>
   <section id = 'hr'>
-    <h2>Houston Rockets</h2>
   </section>
-  <script src="app.js"></script>
+  <form id="f">
+    <p>
+      <label>Away Team Score:</label>
+      <input id="h" name="Houston Rockets" type="text" placeholder="enter score">
+    </p>
+    <p>
+      <label>Home Team Score:</label>
+    <input id="g" name="Golden State" type="text" placeholder="enter score">
+    </p>
+    <div>
+      <label for="dd">Choose Home Team:</label>
+      <select id ="dd" name="options">
+          <option value="Golden State">Golden State</option>
+          <option value="Houston">Houston Rockets</option>
+      </select>
+    </div>
+    <input type="submit">
+  </form>
+  <script src="Score.js"></script>
 </body>
 
 </html>

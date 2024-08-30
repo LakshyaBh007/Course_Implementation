@@ -447,9 +447,14 @@ const products = [
 // ]
 
 const categoryWise = (products)=>{
-  products
+  products.reduce((acc,product)=>{
+  const p = product.category;
+  acc[p]?acc[p].push(product):acc[p]=[];
+  return acc;
+  console.log(acc);
+  },{});
 }
-
+console.log(categoryWise(products));
 
 
 const input7 = 6;

@@ -141,3 +141,39 @@ gsSection.appendChild(chart1);
 const hrSection = document.querySelector('#hr');
 const chart2 = makeChart(warriorsGames, 'Houston');
 hrSection.appendChild(chart2);
+
+const form = document.querySelector('#f');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  const input1 = document.querySelector('#h');
+  const input2 = document.querySelector('#g');
+  const home = document.querySelector('#dd');
+  const homeTeam = home.value.trim();
+  const awayTeam = homeTeam === 'Golden State'? 'Houston':'Golden State';
+  const awayPoints = parseInt(input1.value.trim());
+  const homePoints = parseInt(input2.value.trim());
+  const newGame = {
+    awayTeam: {
+      team: awayTeam,
+      points: awayPoints,
+      isWinner: awayPoints>homePoints
+    },
+    homeTeam: {
+      team: homeTeam,
+      points: homePoints,
+      isWinner: homePoints>awayPoints
+    }
+  };
+  warriorsGames.push(newGame);
+  updateCharts();
+form.reset();
+});
+
+const updateCharts = () => {
+  gsSection.innerHTML = " ";
+  hrSection.innerHTML = " ";
+  const chart1 = makeChart(warriorsGames, 'Golden State');
+  gsSection.appendChild(chart1);
+  const chart2 = makeChart(warriorsGames, 'Houston');
+  hrSection.appendChild(chart2);
+}
