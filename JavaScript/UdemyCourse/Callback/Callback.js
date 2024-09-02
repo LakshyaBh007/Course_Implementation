@@ -28,17 +28,27 @@ const btn = document.querySelector('button');
 // },1000);
 
 const moveX = (element,amount,delay,callback)=>{
+    const bodyBoundary = document.body.clientWidth;
+    const elRight = element.getBoundingClientRect().right;
+    const currLeft = element.getBoundingClientRect().left;
+    if (elRight + amount > bodyBoundary){
+        console.log('Done - cannot go that far');
+    }
+    else{
     setTimeout(()=>{
-        element.style.transform = `translateX(${amount}px)`
+        element.style.transform = `translateX(${currLeft + amount}px)`
         if (callback) callback();
     },delay);
+}
 };
 moveX(btn,100,1000,()=>{
-    moveX(btn,200,1000,()=>{
-        moveX(btn,300,1000,()=>{
-            moveX(btn,400,1000,()=>{
-                moveX(btn,500,1000);
+    moveX(btn,100,1000,()=>{
+        moveX(btn,100,1000,()=>{
+            moveX(btn,100,1000,()=>{
+                moveX(btn,100,1000);
             });
         });
     });  
 });
+
+//Callback hell

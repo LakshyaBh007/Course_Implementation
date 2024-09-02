@@ -227,6 +227,7 @@ const Arrayob = [
 ];
 console.log(Arrayob);
 
+
 //Reduce
 let Type = Arrayob.reduce(
   (a, c) => ({ ...a, [c.type]: a[c.type] ? ++a[c.type] : 1 }),
@@ -430,7 +431,7 @@ console.log(highScore);
 
 
 
-const products = [
+const arrayProduct = [
   { name: "Product 1", price: 20, category: "Electronics" },
   { name: "Product 2", price: 30, category: "Clothes" },
   { name: "Product 3", price: 40, category: "Electronics" },
@@ -447,14 +448,13 @@ const products = [
 // ]
 
 const categoryWise = (products)=>{
-  products.reduce((acc,product)=>{
+  return products.reduce((acc,product)=>{
   const p = product.category;
-  acc[p]?acc[p].push(product):acc[p]=[];
+  acc[p]?acc[p].push(product):acc[p]=[product];
   return acc;
-  console.log(acc);
   },{});
 }
-console.log(categoryWise(products));
+console.log(categoryWise(arrayProduct));
 
 
 const input7 = 6;
