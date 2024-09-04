@@ -137,7 +137,7 @@ fakeRequest('/users')
 
 
  //rewriting callback hell with promises
- btn = document.querySelector('button');
+ const btn = document.querySelector('button');
  const moveX = (element, amount, delay) => {
     return new Promise((resolve,reject)=>{
        setTimeout(()=>{
@@ -165,4 +165,4 @@ fakeRequest('/users')
     console.log(`Body is ${bodyBoundary}px wide`);
     console.log(`Element is at ${elRight}px, ${amount}px is too large`);
  }
-)
+);
