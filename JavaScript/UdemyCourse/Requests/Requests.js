@@ -119,24 +119,26 @@ const fetchNextPlanets = (url = 'http://swapi.dev/api/planets/') => {
     return axios.get(url);
 }
 
-const printPlanets = ({data}) => {
-    console.log(data);
-    for (let planet of data.results){
-        console.log(planet.name);
-    }
-    //return Promise.resolve(data.next);
+const printPlanets = (data) => {
+    // console.log(data);
+    // for (let planet of data.results){
+    //     console.log(planet.name);
+    // }
+    return Promise.resolve(data.next);
     //return fetchNextPlanets(data.next);
-    return data.next;
+    //return data;
 };
 
-fetchNextPlanets()
-.then(printPlanets)
-.then(fetchNextPlanets)
-.then(printPlanets)
-.then(fetchNextPlanets)
-.then(printPlanets)
-.then(fetchNextPlanets)
-.then(printPlanets)
-.catch((err)=>{
-    console.log('error',err);
-});
+console.log(printPlanets([2,3,4,5]));
+
+// fetchNextPlanets()
+// .then(printPlanets)
+// .then(fetchNextPlanets)
+// .then(printPlanets)
+// .then(fetchNextPlanets)
+// .then(printPlanets)
+// .then(fetchNextPlanets)
+// .then(printPlanets)
+// .catch((err)=>{
+//     console.log('error',err);
+// });

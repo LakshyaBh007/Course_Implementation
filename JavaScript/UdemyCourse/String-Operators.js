@@ -136,3 +136,4 @@ switch(day){
 let status = 'offline';
 let color = status === 'offline' ? 'green' : 'yellow';
 console.log(color)
+

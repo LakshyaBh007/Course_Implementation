@@ -204,3 +204,13 @@ function printPokemon(pokemon){
     console.log(poke.data.name);
   }
 };
+
+function time(){
+  return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log('hello');
+            resolve();
+        },1000)
+    })
+};
+
