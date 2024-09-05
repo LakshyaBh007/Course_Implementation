@@ -1,7 +1,7 @@
 {
   "name": "lakshya",
   "version": "1.0.0",
-  "description": "new npm package",
+  "description": "New npm package with utility functions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,9 @@
     "package"
   ],
   "author": "Lakshya Bhatia",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LakshyaBh007/Course_Implementation/tree/master/NPM/Projects/NewPackage"
+  }
 }
