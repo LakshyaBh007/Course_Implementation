@@ -103,3 +103,13 @@ console.log('application is starting');
 //.bin Directory: Provides a place for npm to link executables 
 //from installed packages, making them easily accessible for 
 //command-line usage.
+
+
+// Dependencies
+// Purpose: These are the libraries or packages that your application needs in order to run in a production environment.
+// Usage: They are essential for the core functionality of your application. For example, if you're building a web server, a library like express would be a regular dependency because it's needed to handle web requests in production.
+// Installation: They are installed when you run commands like npm install or yarn install without any special flags.
+// DevDependencies
+// Purpose: These are the libraries or packages that are only needed during the development and testing phases of your project.
+// Usage: They include tools for development tasks such as code linting, testing frameworks, build tools, and transpilers. For example, jest for unit testing or eslint for code linting are typically listed under devDependencies.
+// Installation: They are installed when you run commands like npm install --save-dev or yarn add --dev. They are not included when you install the package for production use.
